@@ -1,0 +1,27 @@
+// Use
+@if $module-container {
+	.container {
+		width: $screen-lg-max;
+		margin: 0 auto;
+		text-align: left;
+		position: relative;
+		padding-left: $containerIndent;
+		padding-right: $containerIndent;
+		max-width: 100%;
+	}
+	@media (max-width: $screen-lg-max) {
+		.container {
+			width: $screen-md;
+		}
+	}
+	@media (max-width: $screen-md-max) {
+		.container {
+			width: $screen-sm;
+		}
+	}
+	@media (max-width: $screen-sm-max) {
+		.container {
+			width: 100%;
+		}
+	}
+}

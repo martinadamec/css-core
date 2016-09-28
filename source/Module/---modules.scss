@@ -1,0 +1,38 @@
+
+/**
+ * Function for button
+ * @author Martin Adamec
+ * @url http://adamecmartin.cz
+ */
+@mixin CoreButton($name, $bg, $color, $border, $_bg, $_color, $_border)
+{
+	.btn-#{$name} 
+	{
+		background: $bg;
+		border-color: $bg;
+		color: $color;
+		&:hover, &:focus 
+		{
+			background: $_bg;
+			border-color: $_border;
+			color: $_color;
+			@include boxShadow(0 2px 4px rgba(0, 0, 0, 0.15) inset);
+		}
+	}
+} 
+@mixin CoreButtonInverse($name, $border, $color)
+{
+	.btn-inverse-#{$name}
+	{
+		border: 1px solid $border;
+		color: $border;
+		background: transparent;
+		&:hover, &:focus 
+		{
+			background: $border;
+			color: $color;
+			@include boxShadow(0 2px 4px rgba(0, 0, 0, 0.15) inset);
+		}
+	}
+} 
+

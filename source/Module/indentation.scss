@@ -23,7 +23,7 @@
 
 
 // Use
-@if $module_indentation {
+@if $module-indentation {
 	// Default
 	@include CoreIndetation("", $indentationDefault);
 

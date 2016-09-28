@@ -54,44 +54,6 @@ $margin-lg: 32px;
 
 
 /**
- * Modules
- */
-$module_flex 		: true !default;
-$module_visibility	: true !default;
-$module_alert 		: true !default;
-$module_indentation : true !default;
-
-
-/**
- * Module: GRID
- */
-$module_grid 		: true !default;
-// Cols
-$gridCols 		: 12 !default;
-$gridSizes 		: xxs xs sm md lg xlg !default;
-// Indent
-$gridIndent-xlg	: 24px !default;
-$gridIndent-lg	: 18px !default;
-$gridIndent		: 14px !default;
-$gridIndent-md	: 10px !default;
-$gridIndent-sm	: 8px !default;
-$gridIndent-xs	: 6px !default;
-$gridIndent-xxs	: 4px !default;
-$gridSizesIndent : $gridIndent-xxs $gridIndent-xs $gridIndent-sm $gridIndent-md $gridIndent-lg $gridIndent-xlg !default;
-
-
-/**
- * Module: INDETATION
- * @require GRID
- */
-$module_indentation : true !default;
-$indentationSizes 	: $gridSizes !default;
-$indentationAll 	: $gridSizesIndent !default;
-$indentationDefault : $gridIndent !default;
-
-
-
-/**
  * Clearfix elements
  */
 $coreClearfixElements: clearfix row row-md row-sm row-xs;
@@ -191,3 +153,116 @@ $radius-lg: 8px;
  */
 $slow: 0.4s;
 $fast: 0.25s;
+
+
+
+/**
+ * ==========================================
+ * 		2. MODULES
+ * ==========================================
+ */
+
+/**
+ * Module: GRID
+ */
+$module-grid 	: true !default;
+// Cols
+$gridCols 		: 12 !default;
+$gridSizes 		: xxs xs sm md lg xlg !default;
+// Indent
+$gridIndent-xlg	: 24px !default;
+$gridIndent-lg	: 18px !default;
+$gridIndent		: 14px !default;
+$gridIndent-md	: 10px !default;
+$gridIndent-sm	: 8px !default;
+$gridIndent-xs	: 6px !default;
+$gridIndent-xxs	: 4px !default;
+$gridSizesIndent : $gridIndent-xxs $gridIndent-xs $gridIndent-sm $gridIndent-md $gridIndent-lg $gridIndent-xlg !default;
+
+
+/**
+ * Module: CONTAINER
+ * @require GRID
+ */
+$module-container: true !default;
+$containerIndent: $gridIndent;
+
+
+/**
+ * Module: INDETATION
+ * @require GRID
+ */
+$module-indentation : true !default;
+$indentationSizes 	: $gridSizes !default;
+$indentationAll 	: $gridSizesIndent !default;
+$indentationDefault : $gridIndent !default;
+
+
+/**
+ * Module: FLEXBOX
+ * @require GRID
+ */
+$module-flexbox 	: false !default;
+$flexboxSizes 		: $gridSizes !default;
+$flexboxIndents		: $gridSizesIndent !default;
+$flexboxIndent 		: $gridIndent !default;
+
+
+/**
+ * Module: VISIBILITY
+ * @require GRID
+ */
+$module-visibility 	: true !default;
+$visibilitySizes 	: $gridSizes !default;
+
+
+/**
+ * Module: ALERT
+ * @require Parameters: $primary, $danger, $success, $warning
+ */
+$module-alert 		: true !default;
+$alertPadding 		: 8px 16px 8px 58px !default;
+$alertMarginTop 	: $margin !default;
+$alertMarginBottom 	: $margin !default;
+$alertMinHeight 	: 40px !default;
+$alertBorderSize 	: 1px !default;
+// Data for types
+$alertInfo 			: info $primary $primary $white !default;
+$alertDanger 		: danger $danger $danger $white !default;
+$alertSuccess 		: success $success $success $white !default;
+$alertWarning 		: warning $warning $warning $white !default;
+$alertTypes 		: $alertInfo, $alertDanger, $alertSuccess, $alertWarning !default;
+
+
+
+/**
+ 
+	.alert {
+		padding: $alertPadding;
+		margin: $alertMarginTop 0 $alertMarginTop;
+		position: relative;
+		min-height: $alertMinHeight;
+		border: $alertBorderSize solid transparent;
+		// Alert group
+		& + .alert {
+			margin-top: -#{($alertMarginBottom / 2)};
+		}
+		// Icon
+		&:before {
+			display: block;
+			position: absolute;
+			left: 18px;
+			top: 50%;
+			margin-top: -15px;
+			@include font-family("ico");
+			@include font(30px, 30px);
+		}
+		p {
+			margin: $margin-sm 0;
+		}
+	}
+	@include CoreAlertBox(info, $primary, $white, $primary, "\f05a");
+	@include CoreAlertBox(danger, $danger, $white, $danger, "\f06a");
+	@include CoreAlertBox(success, $success, $white, $success, "\f058");
+	@include CoreAlertBox(warning, $warning, $white, $warning, "\f05a");
+ */

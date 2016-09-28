@@ -37,7 +37,7 @@
 
 
 // Use
-@if $module_grid {
+@if $module-grid {
 	// For each grid
 	[class^="col-"], [class*=" col-"] {
 		float: left;
