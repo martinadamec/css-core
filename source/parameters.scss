@@ -56,7 +56,7 @@ $margin-lg: 32px;
 /**
  * Clearfix elements
  */
-$coreClearfixElements: clearfix row row-md row-sm row-xs;
+$coreClearfixElements: clearfix !default;
 
 
 /**
@@ -163,6 +163,16 @@ $fast: 0.25s;
  */
 
 /**
+ * Module: RESET
+ */
+$module-reset 	: true !default;
+
+/**
+ * Module: BASE
+ */
+$module-base 	: true !default;
+
+/**
  * Module: GRID
  */
 $module-grid 	: true !default;
@@ -232,37 +242,3 @@ $alertDanger 		: danger $danger $danger $white !default;
 $alertSuccess 		: success $success $success $white !default;
 $alertWarning 		: warning $warning $warning $white !default;
 $alertTypes 		: $alertInfo, $alertDanger, $alertSuccess, $alertWarning !default;
-
-
-
-/**
- 
-	.alert {
-		padding: $alertPadding;
-		margin: $alertMarginTop 0 $alertMarginTop;
-		position: relative;
-		min-height: $alertMinHeight;
-		border: $alertBorderSize solid transparent;
-		// Alert group
-		& + .alert {
-			margin-top: -#{($alertMarginBottom / 2)};
-		}
-		// Icon
-		&:before {
-			display: block;
-			position: absolute;
-			left: 18px;
-			top: 50%;
-			margin-top: -15px;
-			@include font-family("ico");
-			@include font(30px, 30px);
-		}
-		p {
-			margin: $margin-sm 0;
-		}
-	}
-	@include CoreAlertBox(info, $primary, $white, $primary, "\f05a");
-	@include CoreAlertBox(danger, $danger, $white, $danger, "\f06a");
-	@include CoreAlertBox(success, $success, $white, $success, "\f058");
-	@include CoreAlertBox(warning, $warning, $white, $warning, "\f05a");
- */

@@ -1,0 +1,38 @@
+// Use
+@if $module-reset {
+	body, html, 
+	ul, li, ol, 
+	p, div {
+		margin: 0;
+		padding: 0;
+	}
+
+	li {
+		display: block;
+		list-style-type: none;
+	}
+
+	h1, h2, h3, h4, h5, h6 {
+		margin: 0;
+		padding: 0;
+	}
+
+	input:focus, textarea:focus, a:focus, select:focus {
+		outline:none;
+	}
+
+	input::-moz-focus-inner, textarea::-moz-focus-inner {
+		border:0;
+		padding:0;
+	}
+
+	html {
+		font-family: sans-serif;
+		-ms-text-size-adjust: 100%;
+		-webkit-text-size-adjust: 100%;
+	}
+	
+	* {
+		box-sizing: border-box;
+	}
+}

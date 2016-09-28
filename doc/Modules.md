@@ -3,6 +3,16 @@
 Describe the functionality of each module and a description of their parameters.
 
 
+## Mudule: RESET
+- filename: `source/Module/reset.scss`
+- parameter: `$module-reset` (default: `true`)
+
+
+## Mudule: BASE
+- filename: `source/Module/base.scss`
+- parameter: `$module-base` (default: `true`)
+
+
 ## Mudule: GRID
 - filename: `source/Module/grid.scss`
 - parameter: `$module-grid` (default: `true`)
@@ -18,9 +28,9 @@ Describe the functionality of each module and a description of their parameters.
 - parameter: `$module-flexbox` (default: `false`)
 
 
-## Mudule: INDETATION
-- filename: `source/Module/indetation.scss`
-- parameter: `$module-indetation` (default: `true`)
+## Mudule: INDENTATION
+- filename: `source/Module/indentation.scss`
+- parameter: `$module-indentation` (default: `true`)
 
 
 ## Mudule: VISIBILITY

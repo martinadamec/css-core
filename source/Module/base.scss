@@ -1,0 +1,127 @@
+// Use
+@if $module-base {
+	body {
+		color: $text-color;
+		@include font($font-size, $line-height, $normal);
+		background: $body-bg;
+		font-family: $font;
+		min-width: $screen-min;
+	}
+
+	// Clearfix
+	@include Clearfix($coreClearfixElements);
+	
+
+	// Heading font-weight
+	@include headings {
+		font-weight: $normal;
+	}
+
+	// Link
+	a {
+		@include underline(0,1);
+		color: $link-color;
+		img {
+			border: none;
+			outline: none;
+		} 
+	}
+
+	// Floating
+	.pull-left {
+		float: left !important;
+	}
+	.pull-right {
+		float: right !important;
+	}
+	.pull-none {
+		float: none !important;
+	}
+
+	// Aligment
+	.text-left {
+		text-align: left;
+	}
+	.text-right {
+		text-align: right;
+	}
+	.text-center {
+		text-align: center;
+	}
+	.text-justify {
+		text-align: justify;
+	}
+
+	// Responsive image
+	.img-responsive {
+		max-width: 100%;
+		height: auto;
+		display: block;
+	}
+	.img-responsive-inline {
+		max-width: 100%;
+		height: auto;
+		display: inline-block;
+	}
+
+	// Hide text
+	.text-hide {
+		@include font(0em);
+		color: transparent;
+		text-shadow: none;
+		background-color: transparent;
+		border: 0;
+		position:absolute;
+		width:1px;
+		height:1px;
+		padding:0;
+		margin:-1px;
+		overflow:hidden;
+		clip:rect(0,0,0,0);
+		border:0
+	}
+
+	// Other
+	.text-normal {
+		font-weight: $normal;
+	}
+	.text-semibold {
+		font-weight: $semibold;
+	}
+	.text-bold {
+		font-weight: $bold;
+	}
+	.text-uppercase {
+		text-transform: uppercase;
+	}
+	.text-success {
+		color: $success;
+	}
+	.text-warning {
+		color: $warning;
+	}
+	.text-primary {
+		color: $primary;
+	}
+	.text-danger {
+		color: $danger;
+	}
+
+	// Show mode
+	.show-inline-block {
+		display: inline-block;
+	}
+	.show-inline {
+		display: inline;
+	}
+	.show-block {
+		display: block;
+	}
+	.show-table {
+		display: table;
+	}
+	.show-none {
+		display: none;
+	}
+
+}

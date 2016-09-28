@@ -5,26 +5,6 @@
  */
 
 
-/**
- * Box-sizing property
- * @param {$type} Property value
- */
-@mixin boxSizing($val: border-box)
-{
-	box-sizing: $val;
-}
-
-
-
-/**
- * Box-shadow property
- * @param {$val} Preperty value
- */
-@mixin boxShadow($val...)
-{
-	box-shadow: $val;
-}
-
 
 /**
  * Transform: 2D translate
@@ -42,7 +22,7 @@
  * Clearfix
  * @param {$list} Array of class
  */
-@mixin __Clearfix($list)
+@mixin Clearfix($list)
 {
 	@each $item in $list {
 		.#{$item} {
@@ -101,33 +81,6 @@
 		&:hover, &:focus {text-decoration: none;}
 	}
 }
-
-
-
-/**
- * Transition
- * @param {$val} Transition property
- */
-@mixin transition($val...)
-{
-	transition: $val;
-}
-
-
-/**
- * Border radius
- * @param {$val} Border-radius value
- */
-@mixin radius($val: $radius)
-{
-	border-radius: $val;
-}
-// Reset border-radius
-@mixin radiusReset()
-{
-	@include radius(none);
-}
-
 
 /**
  * Gradient helper
