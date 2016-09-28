@@ -3,7 +3,6 @@
   "description": "Adamec Martin - CSS Core in Sass",
   "version": "1.0.0",
   "license": "Proprietary",
-  "private": true,
   "main": "source/main.scss",
   "scripts": {
     "test": ""
