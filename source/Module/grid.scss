@@ -1,0 +1,62 @@
+// Cols with offset too
+@mixin CoreGrid($size, $min, $cols: 12)
+{
+	@media (min-width: $min) 
+	{
+		.offset-col-#{$size}-0 {
+			margin-left: 0;
+		}
+		@for $i from 1 through $cols {
+			// Col
+			.col-#{$size}-#{$i} {
+				width: $i * 100% / 12;
+			}
+			// Offset
+			.offset-col-#{$size}-#{$i} {
+				margin-left: $i * 100% / 12;
+			}
+		}
+	}
+}
+
+
+// Grid sizes
+@mixin CoreGridSize($class, $indentation)
+{
+	.#{$class} {
+		margin-left: -$indentation;
+		margin-right: -$indentation;
+		position: relative;
+		> [class^="col-"], > [class*=" col-"] {
+			padding-left: $indentation;
+			padding-right: $indentation;
+		}
+	}
+}
+
+
+
+// Use
+@if $module_grid {
+	// For each grid
+	[class^="col-"], [class*=" col-"] {
+		float: left;
+		position: relative;
+		padding-left: $gridIndent;
+		padding-right: $gridIndent;
+		min-height: 1px;
+		width: 100%;
+	}
+
+	// Default grid sizes
+	@include CoreGridSize("row", $gridIndent);
+
+	// Add grid for each size
+	$i: 1;
+	@each $size in $gridSizes 
+	{
+		@include CoreGrid($size, __ScreenGetMin($size), $gridCols);
+		@include CoreGridSize("row-#{$size}", nth($gridSizesIndent, $i));
+		$i: $i + 1;
+	}
+}

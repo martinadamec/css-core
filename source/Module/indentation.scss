@@ -1,0 +1,37 @@
+// Helped mixin
+@mixin CoreIndetationSub($type, $size, $indentation)
+{
+	.#{$type}-xy#{$size} {
+		#{$type}: $indentation;
+	}
+	.#{$type}-vertical#{$size} {
+		#{$type}-top: $indentation;
+		#{$type}-bottom: $indentation;
+	}
+	.#{$type}-horizontal#{$size} {
+		#{$type}-left: $indentation;
+		#{$type}-right: $indentation;
+	}
+
+}
+@mixin CoreIndetation($size, $indentation)
+{
+	@include CoreIndetationSub('padding', $size, $indentation);
+	@include CoreIndetationSub('margin', $size, $indentation);
+}
+
+
+
+// Use
+@if $module_indentation {
+	// Default
+	@include CoreIndetation("", $indentationDefault);
+
+	// For each size
+	$i: 1;
+	@each $size in $indentationSizes 
+	{
+		@include CoreIndetation("-#{$size}", nth($indentationAll, $i));
+		$i: $i + 1;
+	}
+}

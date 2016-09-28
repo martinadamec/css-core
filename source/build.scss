@@ -4,22 +4,11 @@
  * @url http://adamecmartin.cz
  */
 
-//@if $module_grid 
 //
-//
-// For each grid
-[class^="col-"], [class*=" col-"] {
-	float: left;
-	position: relative;
-	padding-left: $Core__col-padding;
-	padding-right: $Core__col-padding;
-	min-height: 1px;
-	width: 100%;
-}
 
 /** 
  * Add grid for each size
- */
+ *
 @each $size in $Core__grid-sizes 
 {
 	@include __Grid($size, __ScreenGetMin($size), $Core__grid-cols);
@@ -28,7 +17,7 @@
 
 /**
  * Row
- */
+ *
 .row {
 	margin-left: $Core__row-margin;
 	margin-right: $Core__row-margin;
@@ -69,7 +58,7 @@
 
 /**
  * Flex
- */
+ *
 [class^="flex-col-"], [class*=" flex-col-"] {
 	padding-left: $Core__col-padding;
 	padding-right: $Core__col-padding;
@@ -83,7 +72,7 @@
 
 /**
  * Visiblity
- */
+ *
 // Base
 .visible {
 	display: block;
@@ -100,7 +89,7 @@
 
 /**
  * Alert
- */
+ *
 .alert {
 	padding: 8px 16px 8px 58px;
 	margin-top: $margin;
@@ -130,3 +119,4 @@
 @include __AlertBox(danger, $danger, $white, $danger, "\f06a");
 @include __AlertBox(success, $success, $white, $success, "\f058");
 @include __AlertBox(warning, $warning, $white, $warning, "\f05a");
+*/

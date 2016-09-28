@@ -63,97 +63,6 @@ a {
 }
 
 
-/**
- * Intend
- */
-
-// Normal
-.margin-xy {
-	margin: $margin;
-}
-.margin-y {
-	margin-top: $margin;
-	margin-bottom: $margin;
-}
-.margin-x {
-	margin-left: $margin;
-	margin-right: $margin;
-}
-
-// Large
-.margin-xy-lg {
-	margin: $margin-lg;
-}
-.margin-y-lg {
-	margin-top: $margin-lg;
-	margin-bottom: $margin-lg;
-}
-.margin-x-lg {
-	margin-left: $margin-lg;
-	margin-right: $margin-lg;
-}
-
-// Small
-.margin-xy-sm {
-	margin: $margin-sm;
-}
-.margin-y-sm {
-	margin-top: $margin-sm;
-	margin-bottom: $margin-sm;
-}
-.margin-x-sm {
-	margin-left: $margin-sm;
-	margin-right: $margin-sm;
-}
-
-.margin-all-xs {
-	margin: $margin-xs;
-}
-.margin-vertical-xs {
-	margin-top: $margin-xs;
-	margin-bottom: $margin-xs;
-}
-.margin-horizontal-xs {
-	margin-left: $margin-xs;
-	margin-right: $margin-xs;
-}
-// Padding
-.padding-all {
-	padding: $margin;
-}
-.padding-vertical {
-	padding-top: $margin;
-	padding-bottom: $margin;
-}
-.padding-horizontal {
-	padding-left: $margin;
-	padding-right: $margin;
-}
-// sm
-.padding-all-sm {
-	padding: $margin-sm;
-}
-.padding-vertical-sm {
-	padding-top: $margin-sm;
-	padding-bottom: $margin-sm;
-}
-.padding-horizontal-sm {
-	padding-left: $margin-sm;
-	padding-right: $margin-sm;
-}
-// xs
-.padding-all-xs {
-	padding: $margin-xs;
-}
-.padding-vertical-xs {
-	padding-top: $margin-xs;
-	padding-bottom: $margin-xs;
-}
-.padding-horizontal-xs {
-	padding-left: $margin-xs;
-	padding-right: $margin-xs;
-}
-
 
 /**
  * Flex grid
@@ -201,7 +110,7 @@ a {
 	@include boxSizing();
 }
 // Clearfix
-@include __Clearfix($Core_clearfix-el);
+//@include __Clearfix($Core_clearfix-el);
 
 
 /**
@@ -276,7 +185,7 @@ a {
 
 /**
  * Container
- */
+ *
 .container {
 	width: $screen-lg-max;
 	margin: 0 auto;
@@ -301,7 +210,7 @@ a {
 		width: 100%;
 	}
 }
-
+*/
 
 /**
  * Image
