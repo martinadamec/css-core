@@ -10,16 +10,16 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/adamecmartin/css-core.git"
+    "url": "git+https://github.com/martinadamec/css-core.git"
   },
   "keywords": [
   ],
   "author": "Martin Adamec <jsem@adamecmartin.cz>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/adamecmartin/css-core/issues"
+    "url": "https://github.com/martinadamec/css-core/issues"
   },
-  "homepage": "https://github.com/adamecmartin/css-core",
+  "homepage": "https://github.com/martinadamec/css-core",
   "devDependencies": {
     "gulp": "*",
     "autoprefixer": "*",
