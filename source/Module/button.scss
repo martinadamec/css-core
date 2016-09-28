@@ -1,7 +1,3 @@
-// Use
-@if $module-button {
-	/*
-	
 @mixin CoreButton($name, $bg, $color, $border, $_bg, $_color, $_border)
 {
 	.btn-#{$name} 
@@ -33,6 +29,12 @@
 		}
 	}
 } 
+
+// Use
+@if $module-button {
+	/*
+	
+
 
 
 	 */
