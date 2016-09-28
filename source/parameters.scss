@@ -5,161 +5,125 @@
  */
 
 /**
- * Screen size
+ * ===========================================================
+ * 		1. Base parameters for using this FW
+ * ===========================================================
  */
-$screen-xlg: 100%;
-$screen-lg: 1130px;
-$screen-md: 960px;
-$screen-sm: 720px;
-$screen-xs: 540px;
-$screen-xxs: 400px;
-// Min
-$screen-min: 320px;
+// Screen size
+$screen-xlg	: 100% !default;
+$screen-lg	: 1130px !default;
+$screen-md	: 960px !default;
+$screen-sm	: 720px !default;
+$screen-xs	: 540px !default;
+$screen-xxs	: 400px !default;
 
-// Minimal
-$screen-xlg-min: $screen-lg + 1;
-$screen-lg-min: $screen-md + 1;
-$screen-md-min: $screen-sm + 1;
-$screen-sm-min: $screen-xs + 1;
-$screen-xs-min: $screen-xxs + 1;
-$screen-xxs-min: 0;
+// - Min
+$screen-min		: 320px !default;
+$screen-xlg-min	: $screen-lg + 1 !default;
+$screen-lg-min	: $screen-md + 1 !default;
+$screen-md-min	: $screen-sm + 1 !default;
+$screen-sm-min	: $screen-xs + 1 !default;
+$screen-xs-min	: $screen-xxs + 1 !default;
+$screen-xxs-min	: 0 !default;
 
-// Maximal
-$screen-xlg-max: 100%;
-$screen-lg-max: $screen-lg;
-$screen-md-max: $screen-md;
-$screen-sm-max: $screen-sm;
-$screen-xs-max: $screen-xs;
-$screen-xxs-max: $screen-xxs;
-
-/**
- * Modernizer classes
- */
-// Touch
-$touch: ".touchevents";
-$no-touch: ".no-touchevents";
-// CSS collumns
-$csscolumns: ".csscolumns";
-$no-csscolumns: ".no-csscolumns";
+// - Max
+$screen-xlg-max	: 100% !default;
+$screen-lg-max	: $screen-lg !default;
+$screen-md-max	: $screen-md !default;
+$screen-sm-max	: $screen-sm !default;
+$screen-xs-max	: $screen-xs !default;
+$screen-xxs-max	: $screen-xxs !default;
 
 
-/**
- * Margins
- */
-$margin-xs: 4px;
-$margin-sm: 8px;
-$margin-md: 14px;
-$margin: 20px;
-$margin-lg: 32px;
+// Margins
+$margin-xs	: 4px !default;
+$margin-sm	: 8px !default;
+$margin-md	: 14px !default;
+$margin		: 20px !default;
+$margin-lg	: 32px !default;
 
 
-/**
- * Clearfix elements
- */
+// Clearfix elements
 $coreClearfixElements: clearfix !default;
 
 
-/**
- * Base var
- */
-$font: 'Open Sans', Arial, sans-serif;
-$font-size: 14px;
-$line-height: 1.3em;
+// Font
+$fontDefault	: 'Open Sans' !default;
+$font			: $fontDefault, Arial, sans-serif;
+$font-size		: 14px !default;
+$line-height	: 1.3em !default;
 
-
-/**
- * Form
- */
-$Core__input-height: 34px;
-$Core__input-height-lg: 40px;
-$Core__input-height-sm: 36px;
-$Core__input-height-xs: 30px;
 
 
 /**
- * Base colors
+ * ==========================================================
+ * 		2. Base colors and other settings
+ * ==========================================================
  */
-$text-color: #444;
-$body-bg: #820068;
-$main-bg: #fff;//
-$link-color: #540043;
-$theme-color: #540043;
 
-$white: #fff;
-$black: #000;
+// Base colors
+$text-color		: #444 !default;
+$body-bg		: #820068 !default;
+$main-bg		: #fff !default;
+$link-color		: #540043 !default;
+$theme-color	: #540043 !default;
+$white 			: #fff;
+$black 			: #000;
 
 // Grey
-$grey-lighten: #eee;
-$grey-light: #bbb;
-$grey: #727272;
-//$grey-dark: #333;
+$grey-lighten 	: #eee !default;
+$grey-light 	: #bbb !default;
+$grey 			: #727272 !default;
+$grey-dark 		: #333 !default;
 
 // Blue
-$blue: #2ba8db;
-
-//$cyan: #9cd7c6;//
-//$blue-lighten: #e6ecef;//
-//$blue-light: #899daa;//
-//$blue-dark: $text-color;//
+$blue			: #2ba8db !default;
 
 // Green
-$green: #84B816;
+$green			: #84B816 !default;
 
 // Red
-$red: #d6111a;
-//$red-dark: #c43228;//
-//$red-light: #E2564D;//
+$red			: #d6111a !default;
 
 // Orange
-$orange: #f4a137;
+$orange			: #f4a137 !default;
 
-// Yellow
-$yellow: #f8d81d;
-
-// Others
-$pink: #ffbaf1;
-$pinkDark: #cc00a3;
-
-/**
- * Buttons
- */
-$default: #444;
-$primary: $blue;
-$success: #84B816;
-$danger: $red;
-$warning: $orange;
+// Buttons
+$default		: $grey-dark !default;
+$primary		: $blue !default;
+$success		: $green !default;
+$danger			: $red !default;
+$warning		: $orange !default;
 
 
-/**
- * Font weight
- */
-$xbold: 800;
-$bold: 700;
-$semibold: 600;
-$normal: 400;
-$light: 300;
-$xlight: 300;
+// Font weight
+$xbold		: 800 !default;
+$bold		: 700 !default;
+$semibold	: 600 !default;
+$normal		: 400 !default;
+$light		: 300 !default;
+$xlight		: 300 !default;
 
 
-/**
- * Radius
- */
-$radius-sm: 2px;
-$radius: 4px;
-$radius-lg: 8px;
+// Radius
+$radius-lg	: 12px !default;
+$radius		: 10px !default;
+$radius-md	: 8px !default;
+$radius-sm	: 6px !default;
+$radius-xs	: 4px !default;
+$radius-xxs	: 2px !default;
 
-/**
- * Fast of transition
- */
-$slow: 0.4s;
-$fast: 0.25s;
+
+// Fast of transition
+$slow 		: 0.4s !default;
+$fast		: 0.25s !default;
 
 
 
 /**
- * ==========================================
- * 		2. MODULES
- * ==========================================
+ * ==========================================================
+ * 		3. MODULES
+ * ==========================================================
  */
 
 /**
@@ -242,3 +206,33 @@ $alertDanger 		: danger $danger $danger $white !default;
 $alertSuccess 		: success $success $success $white !default;
 $alertWarning 		: warning $warning $warning $white !default;
 $alertTypes 		: $alertInfo, $alertDanger, $alertSuccess, $alertWarning !default;
+
+
+
+/**
+ * ==========================================================
+ * 		4. Addon class
+ * ==========================================================
+ */
+
+// Modernizer classes
+// - Touch
+$touch: ".touchevents";
+$no-touch: ".no-touchevents";
+// - CSS collumns
+$csscolumns: ".csscolumns";
+$no-csscolumns: ".no-csscolumns";
+
+
+
+/**
+ * ==========================================================
+ * 		5. Form
+ * ==========================================================
+ */
+$FormElementHeight-lg	: 40px !default;
+$FormElementHeight		: 36px !default;
+$FormElementHeight-md	: 30px !default;
+$FormElementHeight-sm	: 28px !default;
+$FormElementHeight-xs	: 26px !default;
+$FormElementHeight-xxs	: 24px !default;
