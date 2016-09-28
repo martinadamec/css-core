@@ -122,7 +122,37 @@ $fast		: 0.25s !default;
 
 /**
  * ==========================================================
- * 		3. MODULES
+ * 		3. Form
+ * ==========================================================
+ */
+$FormElementHeight-lg	: 40px !default;
+$FormElementHeight		: 36px !default;
+$FormElementHeight-md	: 30px !default;
+$FormElementHeight-sm	: 28px !default;
+$FormElementHeight-xs	: 26px !default;
+$FormElementHeight-xxs	: 24px !default;
+
+
+
+/**
+ * ==========================================================
+ * 		4. Addon class
+ * ==========================================================
+ */
+
+// Modernizer classes
+// - Touch
+$touch: ".touchevents";
+$no-touch: ".no-touchevents";
+// - CSS collumns
+$csscolumns: ".csscolumns";
+$no-csscolumns: ".no-csscolumns";
+
+
+
+/**
+ * ==========================================================
+ * 		5. MODULES
  * ==========================================================
  */
 
@@ -208,31 +238,13 @@ $alertWarning 		: warning $warning $warning $white !default;
 $alertTypes 		: $alertInfo, $alertDanger, $alertSuccess, $alertWarning !default;
 
 
-
 /**
- * ==========================================================
- * 		4. Addon class
- * ==========================================================
+ * Module: BUTTON
  */
-
-// Modernizer classes
-// - Touch
-$touch: ".touchevents";
-$no-touch: ".no-touchevents";
-// - CSS collumns
-$csscolumns: ".csscolumns";
-$no-csscolumns: ".no-csscolumns";
-
+$module-button 	: true !default;
 
 
 /**
- * ==========================================================
- * 		5. Form
- * ==========================================================
+ * Module: FORM
  */
-$FormElementHeight-lg	: 40px !default;
-$FormElementHeight		: 36px !default;
-$FormElementHeight-md	: 30px !default;
-$FormElementHeight-sm	: 28px !default;
-$FormElementHeight-xs	: 26px !default;
-$FormElementHeight-xxs	: 24px !default;
+$module-form 	: true !default;

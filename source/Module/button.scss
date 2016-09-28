@@ -1,9 +1,7 @@
-
-/**
- * Function for button
- * @author Martin Adamec
- * @url http://adamecmartin.cz
- */
+// Use
+@if $module-button {
+	/*
+	
 @mixin CoreButton($name, $bg, $color, $border, $_bg, $_color, $_border)
 {
 	.btn-#{$name} 
@@ -36,3 +34,6 @@
 	}
 } 
 
+
+	 */
+}
