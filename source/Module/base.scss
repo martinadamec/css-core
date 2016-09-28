@@ -1,0 +1,319 @@
+/**
+ * Base styles
+ * @author Martin Adamec
+ * @url http://adamecmartin.cz
+ */
+
+
+/**
+ * Reset
+ */
+body, html, 
+ul, li, ol, 
+p, div {
+	margin: 0;
+	padding: 0;
+}
+li {
+	display: block;
+	list-style-type: none;
+}
+h1, h2, h3, h4, h5, h6 {
+	margin: 0;
+	padding: 0;
+	font-weight: $normal;
+}
+input:focus, textarea:focus, a:focus, select:focus {
+	outline:none;
+}
+input::-moz-focus-inner, textarea::-moz-focus-inner {
+	border:0;
+	padding:0;
+}
+
+
+/**
+ * Base
+ */
+html {
+	font-family: sans-serif;
+	-ms-text-size-adjust: 100%;
+	-webkit-text-size-adjust: 100%;
+}
+body {
+	margin: 0;
+	color: $text-color;
+	@include font($font-size, $line-height, $normal);
+	background: $body-bg;
+	font-family: $font;
+	min-width: $screen-min;
+}
+
+
+/**
+ * Link
+ */
+a {
+	@include underline(0,1);
+	color: $link-color;
+	img {
+		border: none;
+		outline: none;
+	} 
+}
+
+
+/**
+ * Intend
+ */
+.margin-all {
+	margin: $margin;
+}
+.margin-vertical {
+	margin-top: $margin;
+	margin-bottom: $margin;
+}
+.margin-horizontal {
+	margin-left: $margin;
+	margin-right: $margin;
+}
+.margin-all-lg {
+	margin: $margin-lg;
+}
+.margin-vertical-lg {
+	margin-top: $margin-lg;
+	margin-bottom: $margin-lg;
+}
+.margin-horizontal-lg {
+	margin-left: $margin-lg;
+	margin-right: $margin-lg;
+}
+.margin-all-sm {
+	margin: $margin-sm;
+}
+.margin-vertical-sm {
+	margin-top: $margin-sm;
+	margin-bottom: $margin-sm;
+}
+.margin-horizontal-sm {
+	margin-left: $margin-sm;
+	margin-right: $margin-sm;
+}
+.margin-all-xs {
+	margin: $margin-xs;
+}
+.margin-vertical-xs {
+	margin-top: $margin-xs;
+	margin-bottom: $margin-xs;
+}
+.margin-horizontal-xs {
+	margin-left: $margin-xs;
+	margin-right: $margin-xs;
+}
+// Padding
+.padding-all {
+	padding: $margin;
+}
+.padding-vertical {
+	padding-top: $margin;
+	padding-bottom: $margin;
+}
+.padding-horizontal {
+	padding-left: $margin;
+	padding-right: $margin;
+}
+// sm
+.padding-all-sm {
+	padding: $margin-sm;
+}
+.padding-vertical-sm {
+	padding-top: $margin-sm;
+	padding-bottom: $margin-sm;
+}
+.padding-horizontal-sm {
+	padding-left: $margin-sm;
+	padding-right: $margin-sm;
+}
+// xs
+.padding-all-xs {
+	padding: $margin-xs;
+}
+.padding-vertical-xs {
+	padding-top: $margin-xs;
+	padding-bottom: $margin-xs;
+}
+.padding-horizontal-xs {
+	padding-left: $margin-xs;
+	padding-right: $margin-xs;
+}
+
+
+/**
+ * Flex grid
+ */
+.flex-grid {
+	// Flexbox
+	.flexbox &, .flexboxlegacy & {
+		flex-flow: row wrap;
+		display: flex;
+	}
+	// No flexbox (obsolete brosers)
+	.no-flexboxlegacy & {
+		display: block;
+		> * {
+			display: inline-block;
+		}
+	}
+}
+
+
+/**
+ * Hide text
+ */
+.text-hide {
+	@include font(0em);
+	color: transparent;
+	text-shadow: none;
+	background-color: transparent;
+	border: 0;
+	position:absolute;
+	width:1px;
+	height:1px;
+	padding:0;
+	margin:-1px;
+	overflow:hidden;
+	clip:rect(0,0,0,0);
+	border:0
+}
+
+
+/**
+ * Global
+ */
+* {
+	@include boxSizing();
+}
+// Clearfix
+@include __Clearfix($Core_clearfix-el);
+
+
+/**
+ * Floating
+ */
+.pull-left {
+	float: left !important;
+}
+.pull-right {
+	float: right !important;
+}
+.pull-none {
+	float: none !important;
+}
+
+
+/**
+ * Aligment
+ */
+.text-left {
+	text-align: left;
+}
+.text-right {
+	text-align: right;
+}
+.text-center {
+	text-align: center;
+}
+.text-justify {
+	text-align: justify;
+}
+.text-uppercase {
+	text-transform: uppercase;
+}
+
+/**
+ * Text color
+ */
+.text-success {
+	color: $success;
+}
+.text-warning {
+	color: $warning;
+}
+.text-primary {
+	color: $primary;
+}
+.text-danger {
+	color: $danger;
+}
+
+
+/**
+ * Display
+ */
+._inline-block {
+	display: inline-block;
+}
+._inline {
+	display: inline;
+}
+._block {
+	display: block;
+}
+._table {
+	display: table;
+}
+._none {
+	display: none;
+}
+
+
+/**
+ * Container
+ */
+.container {
+	width: $screen-lg-max;
+	margin: 0 auto;
+	text-align: left;
+	position: relative;
+	padding-left: $Core__grid-intent;
+	padding-right: $Core__grid-intent;
+	max-width: 100%;
+}
+@media (max-width: $screen-lg-max) {
+	.container {
+		width: $screen-md;
+	}
+}
+@media (max-width: $screen-md-max) {
+	.container {
+		width: $screen-sm;
+	}
+}
+@media (max-width: $screen-sm-max) {
+	.container {
+		width: 100%;
+	}
+}
+
+
+/**
+ * Image
+ */
+.img-responsive {
+	max-width: 100%;
+	height: auto;
+	display: block;
+}
+.img-responsive-inline {
+	max-width: 100%;
+	height: auto;
+	display: inline-block;
+}
+
+
+/**
+ * Font weight
+ */
+.bold {
+	font-weight: $bold;
+}

@@ -1,0 +1,147 @@
+/**
+ * @author Martin Adamec
+ * @url http://adamecmartin.cz
+ */
+@mixin CoreGrid($size, $min, $cols: 12)
+{
+	@media (min-width: $min) 
+	{
+		.offset-col-#{$size}-0 {
+			margin-left: 0;
+		}
+		@for $i from 1 through $cols {
+			// Col
+			.col-#{$size}-#{$i} {
+				width: $i * 100% / 12;
+			}
+			// Offset
+			.offset-col-#{$size}-#{$i} {
+				margin-left: $i * 100% / 12;
+			}
+		}
+	}
+} 
+
+/**
+ * Function for button
+ * @author Martin Adamec
+ * @url http://adamecmartin.cz
+ */
+@mixin CoreButton($name, $bg, $color, $border, $_bg, $_color, $_border)
+{
+	.btn-#{$name} 
+	{
+		background: $bg;
+		border-color: $bg;
+		color: $color;
+		&:hover, &:focus 
+		{
+			background: $_bg;
+			border-color: $_border;
+			color: $_color;
+			@include boxShadow(0 2px 4px rgba(0, 0, 0, 0.15) inset);
+		}
+	}
+} 
+@mixin CoreButtonInverse($name, $border, $color)
+{
+	.btn-inverse-#{$name}
+	{
+		border: 1px solid $border;
+		color: $border;
+		background: transparent;
+		&:hover, &:focus 
+		{
+			background: $border;
+			color: $color;
+			@include boxShadow(0 2px 4px rgba(0, 0, 0, 0.15) inset);
+		}
+	}
+} 
+
+
+
+/**
+ * Flex
+ */
+@mixin CoreFlex($size, $min, $cols: 12)
+{
+	@media (min-width: $min) 
+	{
+		@for $i from 1 through $cols {
+			// Col
+			.flex-col-#{$size}-#{$i} {
+				.flexbox &, .flexboxlegacy & {
+					@include flex(0 1 ($i * 100% / 12));
+				}
+				.no-flexboxlegacy & {
+					width: $i * 100% / 12;
+				}
+			}
+		}
+	}
+} 
+
+
+/**
+ * Visibility
+ */
+@mixin CoreVisibility($size, $min, $max)
+{
+	@if $max == null {
+		@media (min-width: $min) {
+			.visible-#{$size} {
+				display: block;
+			}
+			table.visible-#{$size} {
+				display: table;
+			}
+			.hidden-#{$size} {
+				display: none !important;
+			}
+		}
+		@media (max-width: $min - 1) {
+			.visible-#{$size} {
+				display: none;
+			}
+		}
+	}
+	@else {
+		@media (min-width: $min) and (max-width: $max) {
+			.visible-#{$size} {
+				display: block;
+			}
+			table.visible-#{$size} {
+				display: table;
+			}
+			.hidden-#{$size} {
+				display: none !important;
+			}
+		}
+		@media (max-width: $min - 1), (min-width: $max + 1) {
+			.visible-#{$size} {
+				display: none;
+			}
+		}
+	}
+} 
+
+
+/**
+ * Function for alert box
+ */
+@mixin CoreAlertBox($name, $border, $bg, $color, $ico)
+{
+	.alert-#{$name} 
+	{
+		background: $bg;
+		border-color: $border;
+		color: $color;
+		&:before {
+			content: $ico;
+		}
+		a {
+			color: $color;
+		}
+	}
+} 

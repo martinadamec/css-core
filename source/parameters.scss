@@ -1,0 +1,184 @@
+/**
+ * Base variables for project
+ * @author Martin Adamec
+ * @url http://adamecmartin.cz
+ */
+
+/**
+ * Screen size
+ */
+$screen-xlg: 100%;
+$screen-lg: 1130px;
+$screen-md: 960px;
+$screen-sm: 720px;
+$screen-xs: 540px;
+$screen-xxs: 400px;
+// Min
+$screen-min: 320px;
+
+// Minimal
+$screen-xlg-min: $screen-lg + 1;
+$screen-lg-min: $screen-md + 1;
+$screen-md-min: $screen-sm + 1;
+$screen-sm-min: $screen-xs + 1;
+$screen-xs-min: $screen-xxs + 1;
+$screen-xxs-min: 0;
+
+// Maximal
+$screen-xlg-max: 100%;
+$screen-lg-max: $screen-lg;
+$screen-md-max: $screen-md;
+$screen-sm-max: $screen-sm;
+$screen-xs-max: $screen-xs;
+$screen-xxs-max: $screen-xxs;
+
+/**
+ * Modernizer classes
+ */
+// Touch
+$touch: ".touchevents";
+$no-touch: ".no-touchevents";
+// CSS collumns
+$csscolumns: ".csscolumns";
+$no-csscolumns: ".no-csscolumns";
+
+
+/**
+ * Margins
+ */
+$margin-xs: 4px;
+$margin-sm: 8px;
+$margin-md: 14px;
+$margin: 20px;
+$margin-lg: 32px;
+
+
+/**
+ * GRID SYSTEM
+ */
+$Core__grid-intent: 14px;
+$Core__grid-intent-md: 10px;
+$Core__grid-intent-sm: 6px;
+$Core__grid-intent-xs: 4px;
+$Core__grid-cols: 12;
+$Core__grid-sizes: xxs xs sm md lg xlg;
+$Core__col-padding: $Core__grid-intent;
+$Core__col-padding-md: $Core__grid-intent-md;
+$Core__col-padding-sm: $Core__grid-intent-sm;
+$Core__col-padding-xs: $Core__grid-intent-xs;
+$Core__row-margin: -#{$Core__grid-intent};
+$Core__row-margin-md: -#{$Core__grid-intent-md};
+$Core__row-margin-sm: -#{$Core__grid-intent-sm};
+$Core__row-margin-xs: -#{$Core__grid-intent-xs};
+
+
+/**
+ * Clearfix elements
+ */
+$Core_clearfix-el: clearfix row row-md row-sm row-xs;
+
+
+/**
+ * Base var
+ */
+$font: 'Open Sans', Arial, sans-serif;
+$font-size: 14px;
+$line-height: 1.3em;
+
+
+/**
+ * Form
+ */
+$Core__input-height: 34px;
+$Core__input-height-lg: 40px;
+$Core__input-height-sm: 36px;
+$Core__input-height-xs: 30px;
+
+
+/**
+ * Base colors
+ */
+$text-color: #444;
+$body-bg: #820068;
+$main-bg: #fff;//
+$link-color: #540043;
+$theme-color: #540043;
+
+$white: #fff;
+$black: #000;
+
+// Grey
+$grey-lighten: #eee;
+$grey-light: #bbb;
+$grey: #727272;
+//$grey-dark: #333;
+
+// Blue
+$blue: #2ba8db;
+
+//$cyan: #9cd7c6;//
+//$blue-lighten: #e6ecef;//
+//$blue-light: #899daa;//
+//$blue-dark: $text-color;//
+
+// Green
+$green: #84B816;
+
+// Red
+$red: #d6111a;
+//$red-dark: #c43228;//
+//$red-light: #E2564D;//
+
+// Orange
+$orange: #f4a137;
+
+// Yellow
+$yellow: #f8d81d;
+
+// Others
+$pink: #ffbaf1;
+$pinkDark: #cc00a3;
+
+/**
+ * Buttons
+ */
+$default: #444;
+$primary: $blue;
+$success: #84B816;
+$danger: $red;
+$warning: $orange;
+
+
+/**
+ * Font weight
+ */
+$xbold: 800;
+$bold: 700;
+$semibold: 600;
+$normal: 400;
+$light: 300;
+$xlight: 300;
+
+
+/**
+ * Radius
+ */
+$radius-sm: 2px;
+$radius: 4px;
+$radius-lg: 8px;
+
+/**
+ * Fast of transition
+ */
+$slow: 0.4s;
+$fast: 0.25s;
+
+
+/**
+ * Modules
+ */
+$module_grid 		: true !default;
+$module_flex 		: true !default;
+$module_visibility	: true !default;
+$module_alert 		: true !default;
+$module_indentation : true !default;

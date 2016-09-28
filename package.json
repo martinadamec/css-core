@@ -1,0 +1,29 @@
+{
+  "name": "adamecmartin-css-core",
+  "description": "Adamec Martin - CSS Core in Sass",
+  "version": "1.0.0",
+  "license": "Proprietary",
+  "private": true,
+  "main": "source/main.scss",
+  "scripts": {
+    "test": ""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/adamecmartin/css-core.git"
+  },
+  "keywords": [
+  ],
+  "author": "Martin Adamec <jsem@adamecmartin.cz>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/adamecmartin/css-core/issues"
+  },
+  "homepage": "https://github.com/adamecmartin/css-core",
+  "devDependencies": {
+    "gulp": "*",
+    "autoprefixer": "*",
+    "gulp-postcss": "*",
+    "gulp-sass": "*"
+  }
+}
