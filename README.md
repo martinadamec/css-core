@@ -9,10 +9,10 @@ If you want to change something install dependences with this command. And than 
 ```
 $ npm install
 
-// Just one time
+# Just one time
 $ gulp css
 
-// Watch source dir
+# Watch source dir
 $ gulp watch
 ```
 
