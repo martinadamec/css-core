@@ -5,7 +5,8 @@ var gulp 		= require('gulp'),
 	autoprefix 	= require('autoprefixer');
 
 var dir = './',
-	source = './source/';
+	source = './source/';//,
+	//requiredSource = './required/';
 
 
 /**
@@ -13,6 +14,7 @@ var dir = './',
  */
 gulp.task('css', function () {
 	gulp.src(source + 'main.scss')
+		//.src(requiredSource + 'main.scss')
 		.pipe(sass({
 			outputStyle: 'expanded', // expanded compressed compact nested
 		}).on('error', sass.logError))

@@ -43,6 +43,10 @@ Describe the functionality of each module and a description of their parameters.
 - parameter: `$module-alert` (default: `true`)
 
 
+## Mudule: FONT
+- filename: `source/Module/font.scss`
+
+
 ## Mudule: BUTTON
 - filename: `source/Module/button.scss`
 - parameter: `$module-button` (default: `true`)

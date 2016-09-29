@@ -1,4 +1,4 @@
-@mixin CoreButton($name, $bg, $color, $border, $_bg, $_color, $_border)
+@mixin CoreButton($name, $bg, $color, $border: null)
 {
 	.btn-#{$name} 
 	{
@@ -7,20 +7,20 @@
 		color: $color;
 		&:hover, &:focus 
 		{
-			background: $_bg;
-			border-color: $_border;
-			color: $_color;
+			background: darken($bg, 8%);
+			border-color: darken($bg, 8%);
+			color: $color;
 			box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15) inset;
 		}
 	}
 } 
-@mixin CoreButtonInverse($name, $border, $color)
+@mixin CoreButtonInverse($name, $border, $color, $bg: transparent)
 {
 	.btn-inverse-#{$name}
 	{
-		border: 1px solid $border;
+		border-color: $border;
 		color: $border;
-		background: transparent;
+		background: $bg;
 		&:hover, &:focus 
 		{
 			background: $border;
@@ -30,12 +30,89 @@
 	}
 } 
 
+@mixin CoreButtonSize($size, $height, $padding, $font)
+{
+	&.btn-#{$size} {
+		height: $height;
+		padding-left: $padding;
+		padding-right: $padding;
+		@include font($font, null);
+	}
+}
+
 // Use
 @if $module-button {
-	/*
-	
+	// Default style
+	.btn {
+		position: relative;
+		padding: 0 $buttonPadding;
+		@include font($buttonFont, null);
+		transition: all $fast ease;
+		height: $buttonHeight;
+		border-radius: $buttonRadius;
+		display: inline-block;
+		border: $buttonBorder;
+		margin: 0;
+		text-align: center;
+		vertical-align: middle;
+		cursor: pointer;
+		background-image: none;
+		white-space: nowrap;
+		// Touch
+		touch-action: manipulation;
+		// User select
+		user-select: none;
+		// Icon
+		i {
+			display: inline-block;
+			position: relative;
+			margin-right: 2px;
+		}
+		span {
+			margin-left: 4px;
+		}
+		i + span {
+			margin-right: 4px;
+			margin-left: 0;
+		}
+		span + i {
+			margin-right: 0;
+			margin-left: 2px;
+		}
+		// Block
+		&.btn-block {
+			display: block;
+			width: 100%;
+		}
+		&.btn-block + .btn-block {
+			margin-top: 5px;
+		}
+		// Other sizes
+		@include CoreButtonSize(lg, $buttonHeight-lg, $buttonPadding-lg, $buttonFont-lg);
+		@include CoreButtonSize(md, $buttonHeight-md, $buttonPadding-md, $buttonFont-md);
+		@include CoreButtonSize(sm, $buttonHeight-sm, $buttonPadding-sm, $buttonFont-sm);
+		@include CoreButtonSize(xs, $buttonHeight-xs, $buttonPadding-xs, $buttonFont-xs);
+		@include CoreButtonSize(xxs, $buttonHeight-xxs, $buttonPadding-xxs, $buttonFont-xxs);
+	}
+	// Link
+	a.btn, span.btn {
+		line-height: ($buttonHeight - 2);
+		@include underline(0,0);
+		// Other sizes
+		&.btn-lg {line-height: $buttonHeight-lg - 2};
+		&.btn-md {line-height: $buttonHeight-md - 2};
+		&.btn-sm {line-height: $buttonHeight-sm - 2};
+		&.btn-xs {line-height: $buttonHeight-xs - 2};
+		&.btn-xxs {line-height: $buttonHeight-xxs - 2};
+	}
+}
 
 
-
-	 */
+@if $module-buttonStyles {
+	// Default
+	@include CoreButton(default, nth($buttonDefault, 1), nth($buttonDefault, 2), nth($buttonDefault, 3));
+	@include CoreButtonInverse(default, nth($buttonDefaultInverse, 1), nth($buttonDefaultInverse, 2), nth($buttonDefaultInverse, 3));
+	// Default
+	@include CoreButton(primary, nth($buttonPrimary, 1), nth($buttonPrimary, 2), nth($buttonPrimary, 3));
+	@include CoreButtonInverse(primary, nth($buttonPrimaryInverse, 1), nth($buttonPrimaryInverse, 2), nth($buttonPrimaryInverse, 3));
 }

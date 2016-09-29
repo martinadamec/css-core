@@ -33,6 +33,7 @@ Import the file to your project and import your own parameters before.
 ### Document
 
 - `README.md`
+- `doc/`
 
 ### Introduction
 

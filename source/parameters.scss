@@ -90,7 +90,7 @@ $orange			: #f4a137 !default;
 
 // Buttons
 $default		: $grey-dark !default;
-$primary		: $blue !default;
+$primary		: $theme-color !default;
 $success		: $green !default;
 $danger			: $red !default;
 $warning		: $orange !default;
@@ -125,12 +125,33 @@ $fast		: 0.25s !default;
  * 		3. Form
  * ==========================================================
  */
+// Height
 $FormElementHeight-lg	: 40px !default;
 $FormElementHeight		: 36px !default;
 $FormElementHeight-md	: 30px !default;
 $FormElementHeight-sm	: 28px !default;
 $FormElementHeight-xs	: 26px !default;
 $FormElementHeight-xxs	: 24px !default;
+// Padding
+$FormElementPadding-lg 	: 14px !default;
+$FormElementPadding 	: 10px !default;
+$FormElementPadding-md 	: 10px !default;
+$FormElementPadding-sm 	: 8px !default;
+$FormElementPadding-xs 	: 8px !default;
+$FormElementPadding-xxs : 6px !default;
+// Textarea
+$FormTextHeight-lg		: 260px !default;
+$FormTextHeight			: 160px !default;
+$FormTextHeight-md		: 120px !default;
+$FormTextHeight-sm		: 80px !default;
+$FormTextHeight-xs		: 60px !default;
+$FormTextHeight-xxs		: 40px !default;
+$FormTextPadding-lg 	: 14px !default;
+$FormTextPadding 		: 10px !default;
+$FormTextPadding-md 	: 10px !default;
+$FormTextPadding-sm 	: 8px !default;
+$FormTextPadding-xs 	: 8px !default;
+$FormTextPadding-xxs 	: 6px !default;
 
 
 
@@ -241,10 +262,62 @@ $alertTypes 		: $alertInfo, $alertDanger, $alertSuccess, $alertWarning !default;
 /**
  * Module: BUTTON
  */
-$module-button 	: true !default;
+$module-button 			: true !default;
+$module-buttonStyles	: true !default;
+// Default
+$buttonRadius 			: $radius-md !default;
+$buttonBorder 			: 1px solid transparent !default;
+// - Padding
+$buttonPadding 			: $margin-md !default;
+$buttonPadding-lg 		: $margin-lg !default;
+$buttonPadding-md 		: $margin !default;
+$buttonPadding-sm 		: $margin-sm !default;
+$buttonPadding-xs 		: $margin-sm !default;
+$buttonPadding-xxs 		: $margin-xs !default;
+// - Font size
+$buttonFont 			: $font-size !default;
+$buttonFont-lg 			: 16px !default;
+$buttonFont-md 			: 14px !default;
+$buttonFont-sm 			: 14px !default;
+$buttonFont-xs 			: 12px !default;
+$buttonFont-xxs 		: 12px !default;
+// - Height
+$buttonHeight 			: $FormElementHeight !default;
+$buttonHeight-lg 		: $FormElementHeight-lg !default;
+$buttonHeight-md 		: $FormElementHeight-md !default;
+$buttonHeight-sm 		: $FormElementHeight-sm !default;
+$buttonHeight-xs 		: $FormElementHeight-xs !default;
+$buttonHeight-xxs 		: $FormElementHeight-xxs !default;
+
+// Styles
+$buttonDefault 			: $default $white $default !default;
+$buttonDefaultInverse	: $buttonDefault !default;
+
+$buttonPrimary 			: $primary $white $primary !default;
+$buttonPrimaryInverse	: $buttonPrimary !default;
 
 
 /**
  * Module: FORM
  */
-$module-form 	: true !default;
+$module-form 		: true !default;
+$formColor 			: $grey !default;
+$formWeight 		: $normal !default;
+$formWeight 		: $normal !default;
+$formBackground 	: $white !default;
+$formRadius 		: $radius !default;
+$formFont 			: $font-size !default;
+$formTransition 	: border-color $fast, box-shadow $fast, color $fast !default;
+$formBorder 		: 1px solid $grey-light;
+$formFocusBorder 	: $theme-color;
+$formFocusColor 	: $text-color !default;
+$formFocusBoxShadow : 0 2px 4px rgba($theme-color, 0.1) inset !default;
+// Label
+$formLabelWeight 	: $normal !default; 
+$formLabelFont 		: $font-size !default;
+
+
+/**
+ * Module: FONT
+ */
+$fontList: 'title' 'Courier New', 'base' $fontDefault; 

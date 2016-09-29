@@ -1,0 +1,14 @@
+// Use
+@function CoreFontFamily($type: "base") {
+	@each $item in $fontList {
+		$name: nth($item, 1);
+		$font: nth($item, 2);
+		@if $name == $type {
+			@return $font;
+		}
+	}
+	@return $fontDefault;
+}
+@mixin FontFamily($type: "base") {
+	font-family: CoreFontFamily($type);
+}
