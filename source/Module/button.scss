@@ -7,8 +7,8 @@
 		color: $color;
 		&:hover, &:focus 
 		{
-			background: darken($bg, 8%);
-			border-color: darken($bg, 8%);
+			background: lighten($bg, 8%);
+			border-color: lighten($bg, 8%);
 			color: $color;
 			box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15) inset;
 		}

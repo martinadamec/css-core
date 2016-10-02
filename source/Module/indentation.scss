@@ -4,11 +4,11 @@
 	.#{$type}-xy#{$size} {
 		#{$type}: $indentation;
 	}
-	.#{$type}-vertical#{$size} {
+	.#{$type}-y#{$size} {
 		#{$type}-top: $indentation;
 		#{$type}-bottom: $indentation;
 	}
-	.#{$type}-horizontal#{$size} {
+	.#{$type}-x#{$size} {
 		#{$type}-left: $indentation;
 		#{$type}-right: $indentation;
 	}

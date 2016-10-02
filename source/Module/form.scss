@@ -78,7 +78,7 @@
 
 
 	// Input
-	@include CoreFormInput(null, $FormElementHeight, $FormElementPadding);
+	@include CoreFormInput('', $FormElementHeight, $FormElementPadding);
 	@include CoreFormInput('-lg', $FormElementHeight-lg, $FormElementPadding-lg);
 	@include CoreFormInput('-md', $FormElementHeight-md, $FormElementPadding-md);
 	@include CoreFormInput('-sm', $FormElementHeight-sm, $FormElementPadding-sm, center);
@@ -87,7 +87,7 @@
 
 
 	// Textarea
-	@include CoreFormText(null, $FormTextHeight, $FormTextPadding);
+	@include CoreFormText('', $FormTextHeight, $FormTextPadding);
 	@include CoreFormText('-lg', $FormTextHeight-lg, $FormTextPadding-lg);
 	@include CoreFormText('-md', $FormTextHeight-md, $FormTextPadding-md);
 	@include CoreFormText('-sm', $FormTextHeight-sm, $FormTextPadding-sm);
@@ -97,7 +97,7 @@
 
 	// Select
 	@include CoreFormSelect('-lg', $FormElementHeight-lg, 10px);
-	@include CoreFormSelect(null, $FormElementHeight, 6px);
+	@include CoreFormSelect('', $FormElementHeight, 6px);
 	@include CoreFormSelect('-md', $FormElementHeight-md, 6px);
 	@include CoreFormSelect('-sm', $FormElementHeight-sm, 6px);
 	@include CoreFormSelect('-xs', $FormElementHeight-xs, 4px);
