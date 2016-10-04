@@ -115,4 +115,7 @@
 	// Default
 	@include CoreButton(primary, nth($buttonPrimary, 1), nth($buttonPrimary, 2), nth($buttonPrimary, 3));
 	@include CoreButtonInverse(primary, nth($buttonPrimaryInverse, 1), nth($buttonPrimaryInverse, 2), nth($buttonPrimaryInverse, 3));
+	// Danger
+	@include CoreButton(danger, nth($buttonDanger, 1), nth($buttonDanger, 2), nth($buttonDanger, 3));
+	@include CoreButtonInverse(danger, nth($buttonDangerInverse, 1), nth($buttonDangerInverse, 2), nth($buttonDangerInverse, 3));
 }

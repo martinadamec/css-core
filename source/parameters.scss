@@ -246,7 +246,7 @@ $visibilitySizes 	: $gridSizes !default;
  * @require Parameters: $primary, $danger, $success, $warning
  */
 $module-alert 		: true !default;
-$alertPadding 		: 8px 16px 8px 58px !default;
+$alertPadding 		: 8px 16px 8px 16px !default;
 $alertMarginTop 	: $margin !default;
 $alertMarginBottom 	: $margin !default;
 $alertMinHeight 	: 40px !default;
@@ -296,6 +296,9 @@ $buttonDefaultInverse	: $buttonDefault !default;
 $buttonPrimary 			: $primary $white $primary !default;
 $buttonPrimaryInverse	: $buttonPrimary !default;
 
+$buttonDanger 			: $danger $white $danger !default;
+$buttonDangerInverse	: $buttonDanger !default;
+
 
 /**
  * Module: FORM
@@ -320,4 +323,4 @@ $formLabelFont 		: $font-size !default;
 /**
  * Module: FONT
  */
-$fontList: 'title' 'Courier New', 'base' $fontDefault; 
+$fontList: ('title': 'Courier New', 'base': $fontDefault) !default; 
