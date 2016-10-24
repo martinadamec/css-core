@@ -44,6 +44,9 @@
 	.frm-select#{$size} {
 		height: $height;
 		text-indent: $indent;
+		&[multiple] {
+			height: 100px;
+		}
 	}
 }
 
@@ -55,8 +58,8 @@
 	{
 		display: block;
 		position: relative;
-		margin-top: $margin-sm;
-		margin-bottom: $margin-sm;
+		margin-top: $margin-xs;
+		margin-bottom: $margin-md;
 		&.frm-el-wrap-lg {
 			margin-top: $margin-md;
 			margin-bottom: $margin;

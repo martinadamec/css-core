@@ -40,6 +40,12 @@
 	}
 }
 
+@mixin CoreButtonHelper($name, $normal, $inverse)
+{
+	@include CoreButton($name, nth($normal, 1), nth($normal, 2), nth($normal, 3));
+	@include CoreButtonInverse($name, nth($inverse, 1), nth($inverse, 2), nth($inverse, 3));
+}
+
 // Use
 @if $module-button {
 	// Default style
@@ -47,6 +53,7 @@
 		position: relative;
 		padding: 0 $buttonPadding;
 		@include font($buttonFont, null);
+		@include FontFamily();
 		transition: all $fast ease;
 		height: $buttonHeight;
 		border-radius: $buttonRadius;
@@ -96,26 +103,24 @@
 	}
 	// Link
 	a.btn, span.btn {
-		line-height: ($buttonHeight - 2);
+		line-height: ($buttonHeight);
 		@include underline(0,0);
 		// Other sizes
-		&.btn-lg {line-height: $buttonHeight-lg - 2};
-		&.btn-md {line-height: $buttonHeight-md - 2};
-		&.btn-sm {line-height: $buttonHeight-sm - 2};
-		&.btn-xs {line-height: $buttonHeight-xs - 2};
-		&.btn-xxs {line-height: $buttonHeight-xxs - 2};
+		&.btn-lg {line-height: $buttonHeight-lg};
+		&.btn-md {line-height: $buttonHeight-md};
+		&.btn-sm {line-height: $buttonHeight-sm};
+		&.btn-xs {line-height: $buttonHeight-xs};
+		&.btn-xxs {line-height: $buttonHeight-xxs};
 	}
 }
 
 
 @if $module-buttonStyles {
 	// Default
-	@include CoreButton(default, nth($buttonDefault, 1), nth($buttonDefault, 2), nth($buttonDefault, 3));
-	@include CoreButtonInverse(default, nth($buttonDefaultInverse, 1), nth($buttonDefaultInverse, 2), nth($buttonDefaultInverse, 3));
-	// Default
-	@include CoreButton(primary, nth($buttonPrimary, 1), nth($buttonPrimary, 2), nth($buttonPrimary, 3));
-	@include CoreButtonInverse(primary, nth($buttonPrimaryInverse, 1), nth($buttonPrimaryInverse, 2), nth($buttonPrimaryInverse, 3));
-	// Danger
-	@include CoreButton(danger, nth($buttonDanger, 1), nth($buttonDanger, 2), nth($buttonDanger, 3));
-	@include CoreButtonInverse(danger, nth($buttonDangerInverse, 1), nth($buttonDangerInverse, 2), nth($buttonDangerInverse, 3));
+	@include CoreButtonHelper(default, $buttonDefault, $buttonDefaultInverse);
+	@include CoreButtonHelper(primary, $buttonPrimary, $buttonPrimaryInverse);
+	@include CoreButtonHelper(danger, $buttonDanger, $buttonDangerInverse);
+	@include CoreButtonHelper(success, $buttonSuccess, $buttonSuccessInverse);
+	@include CoreButtonHelper(warning, $buttonWarning, $buttonWarningInverse);
+	@include CoreButtonHelper(info, $buttonInfo, $buttonInfoInverse);
 }
