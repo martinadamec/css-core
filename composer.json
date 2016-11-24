@@ -1,3 +1,11 @@
 {
-    "name": "martinadamec/css-core"
+    "name": "martinadamec/css-core",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Martin Adamec",
+            "email": "jsem@adamecmartin.cz",
+            "homepage": "http://adamecmartin.cz"
+        }
+    ]
 }
