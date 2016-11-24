@@ -268,6 +268,7 @@ $alertTypes 		: $alertInfo, $alertDanger, $alertSuccess, $alertWarning !default;
 $module-button 			: true !default;
 $module-buttonStyles	: true !default;
 // Default
+$buttonRadiusLarge 		: 20px !default;
 $buttonRadius 			: $radius-md !default;
 $buttonBorder 			: 1px solid transparent !default;
 // - Padding

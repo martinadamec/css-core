@@ -23,7 +23,7 @@ Import the file to your project and import your own parameters before.
 
 ```sass
 @import 'parameters'; // Your own paramters
-@import '/vendor/adamecmartin/css-core/source/main';
+@import '/vendor/martinadamec/css-core/source/main';
 
 // Your code
 ```
