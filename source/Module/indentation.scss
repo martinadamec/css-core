@@ -12,7 +12,18 @@
 		#{$type}-left: $indentation;
 		#{$type}-right: $indentation;
 	}
-
+	.#{$type}-l#{$size} {
+		#{$type}-left: $indentation;
+	}
+	.#{$type}-r#{$size} {
+		#{$type}-right: $indentation;
+	}
+	.#{$type}-t#{$size} {
+		#{$type}-top: $indentation;
+	}
+	.#{$type}-b#{$size} {
+		#{$type}-bottom: $indentation;
+	}
 }
 @mixin CoreIndetation($size, $indentation)
 {
