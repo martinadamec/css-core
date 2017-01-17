@@ -12,16 +12,16 @@
 		#{$type}-left: $indentation;
 		#{$type}-right: $indentation;
 	}
-	.#{$type}-l#{$size} {
+	.#{$type}-left#{$size} {
 		#{$type}-left: $indentation;
 	}
-	.#{$type}-r#{$size} {
+	.#{$type}-right#{$size} {
 		#{$type}-right: $indentation;
 	}
-	.#{$type}-t#{$size} {
+	.#{$type}-top#{$size} {
 		#{$type}-top: $indentation;
 	}
-	.#{$type}-b#{$size} {
+	.#{$type}-bottom#{$size} {
 		#{$type}-bottom: $indentation;
 	}
 }
