@@ -39,11 +39,13 @@ $screen-xxs-max	: $screen-xxs !default;
 
 
 // Margins
+$margin-xxs	: 2px !default;
 $margin-xs	: 4px !default;
 $margin-sm	: 8px !default;
 $margin-md	: 14px !default;
 $margin		: 20px !default;
 $margin-lg	: 32px !default;
+$margin-xlg : 48px !default;
 
 
 // Clearfix elements
@@ -221,9 +223,9 @@ $containerIndent: $gridIndent;
  * @require GRID
  */
 $module-indentation : true !default;
-$indentationSizes 	: $gridSizes !default;
-$indentationAll 	: $gridSizesIndent !default;
-$indentationDefault : $gridIndent !default;
+$indentationSizes 	: xxs xs sm md lg xlg !default;
+$indentationAll 	: $margin-xxs $margin-xs $margin-sm $margin-md $margin-lg $margin-xlg !default;
+$indentationDefault : $margin !default;
 
 
 /**

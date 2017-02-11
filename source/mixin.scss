@@ -99,24 +99,17 @@
 	@if $type == vertical
 	{
 		background: $x;
-		background: -moz-linear-gradient(top, $x 0%, $y 100%);
-		background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,$x), color-stop(100%,$y));
-		background: -webkit-linear-gradient(top, $x 0%,$y 100%);
-		background: -o-linear-gradient(top, $x 0%,$y 100%);
-		background: -ms-linear-gradient(top, $x 0%,$y 100%);
-		background: linear-gradient(to bottom, $x 0%,$y 100%);
-		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#{$x}', endColorstr='#{$y}',GradientType=0 );
+		background: linear-gradient(to bottom, $x 0%, $y 100%);
+	}
+	// Horizontal
+	@else if $type == horizontal {
+		background: $x;
+		background: linear-gradient(to right, $x 0%, $y 100%);
 	}
 	// Horizontal
 	@else {
 		background: $x;
-		background: -moz-linear-gradient(left, $x 0%, $y 100%);
-		background: -webkit-gradient(linear, left top, right top, color-stop(0%,$x), color-stop(100%,$y));
-		background: -webkit-linear-gradient(left, $x 0%,$y 100%);
-		background: -o-linear-gradient(left, $x 0%,$y 100%);
-		background: -ms-linear-gradient(left, $x 0%,$y 100%);
-		background: linear-gradient(to right, $x 0%,$y 100%);
-		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#{$x}', endColorstr='#{$y}',GradientType=1 );
+		background: linear-gradient($type, $x 0%, $y 100%);
 	}
 }
 
@@ -149,5 +142,34 @@
 @mixin headings {
 	h1, h2, h3, h4, h5, h6 {
 		@content;
+	}
+}
+
+
+/**
+ * Placeholder
+ */
+@mixin placeholderStyle {
+	&::-webkit-input-placeholder {
+		@content;
+	}
+	&::-moz-placeholder {
+		@content;
+	}
+	&:-moz-placeholder {
+		@content;
+	}
+	&:-ms-input-placeholder {
+		@content;
+	}
+}
+
+
+/**
+ * Placeholder: color
+ */
+@mixin placeholderColor($color) {
+	@include placeholderStyle {
+		color: $color;
 	}
 }
