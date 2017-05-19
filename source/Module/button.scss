@@ -64,7 +64,7 @@
 		vertical-align: middle;
 		cursor: pointer;
 		background-image: none;
-		white-space: nowrap;
+		//white-space: nowrap;
 		// Touch
 		touch-action: manipulation;
 		// User select
@@ -103,6 +103,7 @@
 	}
 	// Link
 	a.btn, span.btn {
+		min-height: 0;
 		line-height: ($buttonHeight);
 		@include underline(0,0);
 		// Other sizes
