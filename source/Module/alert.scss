@@ -20,6 +20,7 @@
 		position: relative;
 		min-height: $alertMinHeight;
 		border: $alertBorderSize solid transparent;
+		border-radius: $alertBorderRadius;
 		// Alert group
 		& + .alert {
 			margin-top: -#{($alertMarginBottom / 2)};

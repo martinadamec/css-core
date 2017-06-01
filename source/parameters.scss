@@ -256,6 +256,7 @@ $alertMarginTop 	: $margin !default;
 $alertMarginBottom 	: $margin !default;
 $alertMinHeight 	: 40px !default;
 $alertBorderSize 	: 1px !default;
+$alertBorderRadius 	: $radius-sm !default;
 // Data for types
 $alertInfo 			: info $primary $primary $white !default;
 $alertDanger 		: danger $danger $danger $white !default;
