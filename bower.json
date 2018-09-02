@@ -15,5 +15,8 @@
     "tests",
     "gulpfile.js",
     "package.json"
-  ]
+  ],
+  "dependencies": {
+    "bootstrap": "^4.1.3"
+  }
 }

@@ -1,0 +1,29 @@
+/**
+ * Base variables for project
+ * @author Martin Adamec
+ * @url http://adamecmartin.cz
+ */
+
+// Directory for resources
+$dir 			: '..' !default;
+
+// Font
+$font-family-sans-serif	: 'Open Sans' !default;
+
+// Font weight
+$font-weight-xbold		: 800 !default;
+$font-weight-bold		: 700 !default;
+$font-weight-semibold	: 600 !default;
+$font-weight-medium		: 600 !default;
+$font-weight-normal		: 400 !default;
+$font-weight-light		: 300 !default;
+$font-weight-xlight		: 300 !default;
+
+
+// Modernizer classes
+// - Touch
+$touch: ".touchevents";
+$no-touch: ".no-touchevents";
+// - CSS collumns
+$csscolumns: ".csscolumns";
+$no-csscolumns: ".no-csscolumns";

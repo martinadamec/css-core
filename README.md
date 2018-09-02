@@ -1,10 +1,10 @@
 # CSS Core
 
-Small CSS framework for private use.
+Small CSS framework for private use, what use bootstrap.
 
 ## Installation
 
-If you want to change something install dependences with this command. And than compile files.
+If you want to change something install dependencies with this command. And than compile files.
 
 ```
 $ npm install
@@ -22,8 +22,10 @@ $ gulp watch
 Import the file to your project and import your own parameters before.
 
 ```sass
-@import 'parameters'; // Your own paramters
-@import '/vendor/martinadamec/css-core/source/main';
+@import 'variables'; // Your own variables
+@import '/bower_components/adamecmartin-css-core/source/main';
+@import '/bower_components/bootstrap/scss/bootstrap.scss';
+@import '/bower_components/adamecmartin-css-core/source/app';
 
 // Your code
 ```
@@ -33,7 +35,6 @@ Import the file to your project and import your own parameters before.
 ### Document
 
 - `README.md`
-- `doc/`
 
 ### Introduction
 

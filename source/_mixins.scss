@@ -4,25 +4,22 @@
  * @url http://adamecmartin.cz
  */
 
-
-
 /**
- * Transform: 2D translate
- * @param {$x} X axis
- * @param {$y} Y axis
+ * Max width of a element
+ * @param {$width} Maximum width
  */
-@mixin translate2D($x, $y)
-{
-	transform: translate($x, $y);
+@mixin maxWidth($width) {
+	position: relative;
+	margin-left: auto;
+	margin-right: auto;
+	max-width: $width;
 }
-
-
 
 /**
  * Clearfix
  * @param {$list} Array of class
  */
-@mixin Clearfix($list)
+@mixin clearfix($list)
 {
 	@each $item in $list {
 		.#{$item} {
@@ -42,15 +39,15 @@
 /**
  * Font properties
  * @param {$size}   Font-size
- * @param {$lh}     Line-height
+ * @param {$lineHeight}     Line-height
  * @param {$weight} Font weight
  */
-@mixin font($size, $lh: 1.3em, $weight: null)
+@mixin font($size, $lineHeight: 1.3em, $weight: null)
 {
 	font-size: $size;
 	// Line height
-	@if $lh != null {
-		line-height: $lh;
+	@if $lineHeight != null {
+		line-height: $lineHeight;
 	}
 	// Font weight
 	@if $weight != null {
@@ -82,37 +79,6 @@
 	}
 }
 
-/**
- * Gradient helper
- * @param {$x}    Top/left color
- * @param {$y}    Bottom/right color
- * @param {$bg}   Background color for old browser
- * @param {$type} Direction of gradient
- */
-@mixin gradient($x, $y, $bg: null, $type: vertical)
-{
-	// Bg
-	@if $bg == null {
-		$bg: $x;
-	}
-	// Vertical
-	@if $type == vertical
-	{
-		background: $x;
-		background: linear-gradient(to bottom, $x 0%, $y 100%);
-	}
-	// Horizontal
-	@else if $type == horizontal {
-		background: $x;
-		background: linear-gradient(to right, $x 0%, $y 100%);
-	}
-	// Horizontal
-	@else {
-		background: $x;
-		background: linear-gradient($type, $x 0%, $y 100%);
-	}
-}
-
 
 /**
  * Opacity
@@ -121,18 +87,6 @@
 {
 	filter: alpha (opacity=#{$val*100});
 	opacity: $val;
-}
-
-
-/**
- * Flex grid
- * @param {$val} Property value
- */
-@mixin flex($val: 1)
-{
-	box-flex: $val;
-	// New version
-	flex: $val;
 }
 
 
@@ -172,4 +126,9 @@
 	@include placeholderStyle {
 		color: $color;
 	}
+}
+
+
+@mixin fontFamily($type: "base") {
+	font-family: font-family($type);
 }
