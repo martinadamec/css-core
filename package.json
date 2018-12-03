@@ -1,8 +1,8 @@
 {
   "name": "adamecmartin-css-core",
-  "description": "Adamec Martin - CSS Core in Sass",
-  "version": "1.0.0",
-  "license": "Proprietary",
+  "description": "Small CSS framework in sass.",
+  "version": "2.0.1",
+  "license": "MIT",
   "private": true,
   "main": "source/main.scss",
   "scripts": {
@@ -14,11 +14,22 @@
   },
   "keywords": [
   ],
+  "files": [
+    "source/**/*.scss"
+  ],
   "author": "Martin Adamec <jsem@adamecmartin.cz>",
   "bugs": {
     "url": "https://github.com/martinadamec/css-core/issues"
   },
   "homepage": "https://github.com/martinadamec/css-core",
+  "peerDependencies": {
+    "bootstrap": "4.x"
+  },
+  "dependencies": {
+    "bootstrap": "4.*",
+    "jquery": "3.*",
+    "popper.js": "^1.14.5"
+  },
   "devDependencies": {
     "gulp": "*",
     "autoprefixer": "*",
