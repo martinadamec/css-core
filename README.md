@@ -1,6 +1,6 @@
 # CSS Core
 
-Small CSS framework for private use, what use bootstrap.
+Small CSS framework for private use, what use bootstrap 4.
 
 ## Installation
 
@@ -22,10 +22,11 @@ $ gulp watch
 Import the file to your project and import your own parameters before.
 
 ```sass
-@import 'variables'; // Your own variables
-@import '/bower_components/adamecmartin-css-core/source/main';
-@import '/bower_components/bootstrap/scss/bootstrap.scss';
-@import '/bower_components/adamecmartin-css-core/source/app';
+@import "../../node_modules/adamecmartin-css-core/source/preFunctions";
+@import "variables";
+@import "../../node_modules/adamecmartin-css-core/source/main";
+@import "bootstrap.all";
+@import "../../node_modules/adamecmartin-css-core/source/app";
 
 // Your code
 ```

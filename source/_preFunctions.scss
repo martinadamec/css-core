@@ -1,0 +1,38 @@
+/**
+ * Global functions what should be imported before project variables
+ * @author Martin Adamec
+ * @url http://adamecmartin.cz
+ */
+
+
+/**
+ * Strip number units
+ *
+ * e.g.: 13px => 13, 1.5rem => 1.5
+ */
+@function strip-unit($number) {
+	@if type-of($number) == 'number' and not unitless($number) {
+		@return $number / ($number * 0 + 1);
+	}
+
+	@return $number;
+}
+
+/**
+ * Convert pixel size to rem units
+ *
+ * e.g.: 13px => .8125rem
+ */
+@function px2rem($size) {
+	@return ((strip-unit($size) / 16) * 1rem);
+}
+
+/**
+ * Round rem size to valid px equivalence
+ *
+ * e.g.: .8rem => 12.8px => 13px => .8125rem
+ */
+@function fontSizeRound($size, $multiplier: 16)
+{
+	@return px2rem(round(strip-unit($size) * $multiplier));
+}

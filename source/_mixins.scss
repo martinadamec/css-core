@@ -129,6 +129,17 @@
 }
 
 
+/**
+ * Get Font family by key
+ */
 @mixin fontFamily($type: "base") {
 	font-family: font-family($type);
+}
+
+
+/**
+ * set transitions to element
+ */
+@mixin transitionCustom($props: all, $speed: $transition-default, $ease: $transition-ease) {
+	transition: $props $speed $ease;
 }

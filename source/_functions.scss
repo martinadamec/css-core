@@ -4,10 +4,11 @@
  * @url http://adamecmartin.cz
  */
 
-@function strip-unit($num) {
-	@return $num / ($num * 0 + 1);
-}
 
+
+/**
+ * Get font name by key
+ */
 @function font-family($type: "base") {
 	@each $name, $font in $fontList {
 		@if $name == $type {
@@ -16,3 +17,12 @@
 	}
 	@return $fontDefault;
 }
+
+
+/**
+ * Get spacer by key
+ */
+@function spacer($size) {
+	@return map_get($spacers, $size);
+}
+
