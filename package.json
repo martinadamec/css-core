@@ -1,38 +1,37 @@
 {
-  "name": "adamecmartin-css-core",
-  "description": "Small CSS framework in sass.",
-  "version": "2.1.1",
-  "license": "MIT",
-  "private": false,
-  "scripts": {
-    "test": ""
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/martinadamec/css-core.git"
-  },
-  "keywords": [
-  ],
-  "files": [
-    "source/**/*.scss"
-  ],
-  "author": "Martin Adamec <jsem@adamecmartin.cz>",
-  "bugs": {
-    "url": "https://github.com/martinadamec/css-core/issues"
-  },
-  "homepage": "https://github.com/martinadamec/css-core",
-  "peerDependencies": {
-    "bootstrap": "4.x"
-  },
-  "dependencies": {
-    "bootstrap": "4.*",
-    "jquery": "3.*",
-    "popper.js": "^1.14.5"
-  },
-  "devDependencies": {
-    "gulp": "*",
-    "autoprefixer": "*",
-    "gulp-postcss": "*",
-    "gulp-sass": "*"
-  }
+	"name": "adamecmartin-css-core",
+	"description": "Small CSS framework in sass.",
+	"version": "3.0.0",
+	"license": "MIT",
+	"private": false,
+	"scripts": {
+		"test": ""
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/martinadamec/css-core.git"
+	},
+	"keywords": [],
+	"files": [
+		"source/**/*.scss"
+	],
+	"author": "Martin Adamec <jsem@adamecmartin.cz>",
+	"bugs": {
+		"url": "https://github.com/martinadamec/css-core/issues"
+	},
+	"homepage": "https://github.com/martinadamec/css-core",
+	"peerDependencies": {
+		"bootstrap": "^5.2.0"
+	},
+	"dependencies": {
+		"bootstrap": "^5.2.0"
+	},
+	"devDependencies": {
+		"autoprefixer": "^10.4.8",
+		"gulp": "^4.0.2",
+		"gulp-postcss": "^9.0.1",
+		"gulp-sass": "^5.1.0",
+		"postcss": "^8.4.16",
+		"sass": "^1.54.7"
+	}
 }

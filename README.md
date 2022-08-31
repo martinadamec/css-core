@@ -1,6 +1,6 @@
 # CSS Core
 
-Small CSS framework for private use, what use bootstrap 4.
+Small CSS framework for private use, what use bootstrap 5.
 
 ## Installation
 

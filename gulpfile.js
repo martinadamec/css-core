@@ -1,27 +1,26 @@
 'use strict';
 var gulp 		= require('gulp'),
-	sass 		= require('gulp-sass'),
 	postcss 	= require('gulp-postcss'),
 	autoprefix 	= require('autoprefixer');
 
+const s = require('sass');
+const sass = require('gulp-sass')(s);
+
 var dir = './',
-	source = './source/';//,
-	//requiredSource = './required/';
+	source = './source/';
 
 
 /**
  * Generate new style from css/sass/style/*.scss
  */
 gulp.task('css', function () {
-	gulp.src(source + 'main.scss')
+	return gulp.src(source + 'main.scss')
 		//.src(requiredSource + 'main.scss')
 		.pipe(sass({
 			outputStyle: 'expanded', // expanded compressed compact nested
 		}).on('error', sass.logError))
 		.pipe(postcss([
-			autoprefix({
-            	browsers: ['> 5%', 'last 2 version', 'IE 9']
-        	})
+			autoprefix()
         ]))
 		.pipe(gulp.dest(dir));
 });
@@ -30,6 +29,7 @@ gulp.task('css', function () {
 /**
  * Watch files
  */
-gulp.task('watch', ['css'], function () {
-	gulp.watch(source + '**/*', ['css']);
+gulp.task('watch', function () {
+	gulp.series('css')();
+	gulp.watch(source + '**/*', gulp.series('css'));
 });
